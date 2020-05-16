@@ -1,3 +1,22 @@
+/**
+ * The RemNote Frontend API allows you to build RemNote plugins. 
+ * Read more here for a guide, API interface, and examples:
+ * https://www.remnote.io/api
+ */
+
+ /**
+  * General interface:
+  * RemNoteAPI.v0.makeAPICall(methodName, options);
+  * 
+  * Helper methods (see full signatures on https://www.remnote.io/api):
+  * RemNoteAPI.v0.get(remId, options);
+  * RemNoteAPI.v0.get_by_name(name, options);
+  * RemNoteAPI.v0.get_by_source(url, options);
+  * RemNoteAPI.v0.update(remId, options);
+  * RemNoteAPI.v0.create(text, parentId, options);
+  * RemNoteAPI.v0.get_context(options);
+  */
+
 class RemNoteAPIV0 {
   constructor() {
     this.usedMessageIds = 0;
