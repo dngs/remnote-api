@@ -13,6 +13,7 @@
   * RemNoteAPI.v0.get_by_name(name, options);
   * RemNoteAPI.v0.get_by_source(url, options);
   * RemNoteAPI.v0.update(remId, options);
+  * RemNoteAPI.v0.delete(remId, options);
   * RemNoteAPI.v0.create(text, parentId, options);
   * RemNoteAPI.v0.get_context(options);
   */
@@ -50,6 +51,11 @@ class RemNoteAPIV0 {
     });
   }
 
+  async delete(remId, options = {}) {
+    return await this.makeAPICall("delete", {
+      remId, ...options
+    });
+  }
 
   async create(text, parentId, options = {}) {
     return await this.makeAPICall("create", {
