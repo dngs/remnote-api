@@ -85,7 +85,7 @@ class RemNoteAPIV0 {
 
     const messagePromise = new Promise((resolve, reject) => {
       this.messagePromises[messageId] = resolve;
-      window.parent.postMessage(message, "https://www.remnote.io");
+      window.parent.postMessage(message, "*");
     });
     
     const response = await messagePromise;
@@ -97,7 +97,6 @@ class RemNoteAPIV0 {
   }
 
   receiveMessage(event) {
-    if (event.origin !== "https://www.remnote.io") return;
     const data = event.data;
     const messageId = data.messageId;
     this.messagePromises[messageId](data.response);
