@@ -69,6 +69,10 @@ class RemNoteAPIV0 {
     return await this.makeAPICall("get_context", options);
   }
 
+  async close_popup(options = {}) {
+    return await this.makeAPICall("close_popup", options);
+  }
+
   async makeAPICall(methodName, options) {
     const messageId = this.usedMessageIds;
     this.usedMessageIds += 1;
