@@ -2,6 +2,8 @@
  * The RemNote Frontend API allows you to build RemNote plugins. 
  * Read more here for a guide, API interface, and examples:
  * https://www.remnote.io/api
+ * 
+ * Version 0.01
  */
 
  /**
